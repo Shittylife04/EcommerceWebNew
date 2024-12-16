@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple E-Commerce Store</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+</head>
+
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1><span style="color: white;">Jack's</span><span style="color: orange;"> Shop</span></h1>
+            </div>
+            <nav class="navbar">
+                <ul>
+                    <li><a href="#home"><i class="fas fa-home"> HOME</i></a></li>
+                    <li><a href="#about"><i class="fas fa-info-circle"> ABOUT</i></a></li>
+                    <li><a href="#shopnow"><i class="fas fa-shopping-cart"> SHOP NOW</i></a></li>
+                    <li><a href="#signup"><i class="fas fa-sign-in-alt"> SIGN-UP</i></a></li>
+                </ul>
+            </nav>
+            <div class="search-bar">
+                <input type="text" id="searchInput" placeholder="Search for products..." onkeyup="searchProducts()">
+            </div>
+            <div class="cart">
+                <a href="#" onclick="showCart(event)">
+                    <img src="cart-icon.jpg" alt="Cart">
+                    <span class="cart-count">0</span>
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section id="home">
+            <h1>Welcome To Jack's Shop</h1>
+            <hr>
+            <img src="logoImg.jpg" alt="Jack'sShop's Logo" style="max-width: 500px; border-radius: 200px;">
+            <p>Your one stop shop for the latest trends in fashion and accesories.</p>
+        </section>
+        <section id="about">
+            <div class="container">
+                <div class="team">
+                    <h1>Meet The Team</h1>
+                    <hr>
+                    <div class="team-member">
+                        <img src="jack.jpg" alt="Jack">
+                        <h3>Jack Artajo</h3>
+                        <h4>Founder & CEO. Jack's passion for fashion and commitment to quality led to the creation of Jack's Shop.</h4>
+                    </div>
+                    <div class="team-member">
+                        <img src="jake.jpg" alt="Jake">
+                        <h3>Jake Artajo</h3>
+                        <h4>Co-Founder. Jake's committed support on making the best products for the company, making it one of the most successful brands.</h4>
+                    </div>
+                    <div class="team-member">
+                        <img src="Aj.jpg" alt="Aj">
+                        <h3>Aj Krell Tugahan</h3>
+                        <h4>Designer. Responsible for creating stylish and unique pieces for our collection.</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        <section id="shopnow">
+            <div class="container">
+                <h2>SHOP NOW</h2>
+                <div class="product-catalog" id="productCatalog">
+                    <div class="product-item" data-name="Poplin Shirt" data-price="29.99">
+                        <img src="shirt1.avif" alt="Product 1">
+                        <h3>Poplin Shirt</h3>
+                        <p>$29.99</p>
+                        <button onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                    <div class="product-item" data-name="Cortez Light Blue Wavy Shirt" data-price="19.99">
+                        <img src="shirt2.jpg.crdownload" alt="Product 2">
+                        <h3>Cortez Light Blue Wavy Shirt</h3>
+                        <p>$19.99</p>
+                        <button onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                    <div class="product-item" data-name="Thermal-Knit Shirt" data-price="49.99">
+                        <img src="shirt3.avif" alt="Product 3">
+                        <h3>Thermal-Knit Shirt</h3>
+                        <p>$49.99</p>
+                        <button onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                    <div class="product-item" data-name="Purple Jersey Shirt" data-price="39.99">
+                        <img src="shirt4.webp" alt="Product 4">
+                        <h3>Purple Jersey Shirt</h3>
+                        <p>$39.99</p>
+                        <button onclick="addToCart(this)">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="signup">
+            <div class="sign-container">
+                <h2>Sign Up for Exclusive Offers</h2>
+                <form action="signup.php" method="post">
+                    <div class="form-group">
+                        <label for="username">Username</label>
+                        <input type="text" id="username" name="username" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="password">Password</label>
+                        <input type="password" id="password" name="password" required>
+                    </div>
+                    <button type="submit">Sign Up</button>
+                </form>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container">
+            <p>&copy; 2024 ShopNow. All rights reserved.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>
